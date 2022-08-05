@@ -13,6 +13,7 @@ function App() {
           <CharList />
           <CharInfo />
         </div>
+
         <img src={decoration} alt="vision" className="bg-decoration" />
       </main>
     </div>

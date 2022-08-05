@@ -5,7 +5,7 @@ import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import MarvelService from '../../services/MarvelService';
 
-class CharList extends Component {
+class CharListItem extends Component {
     state = {
         char: {},
         loading: true,

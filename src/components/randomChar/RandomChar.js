@@ -15,15 +15,9 @@ class RandomChar extends Component {
     marvelService = new MarvelService();
 
     componentDidMount() {
-        console.log("mount");
         this.updateChar();
-        setInterval(this.updateChar, 15000);
+        // setInterval(this.updateChar, 15000);
     }
-
-    componentDidUpdate() {
-        console.log("upd");
-    }
-
     onCharLoading = (char) => {
         this.setState({ loading: true })
     }
@@ -43,7 +37,6 @@ class RandomChar extends Component {
     }
 
     render() {
-        console.log("render");
         const { char, loading, error } = this.state,
             errorMessage = error ? <ErrorMessage /> : null,
             spinner = loading ? <Spinner /> : null,
@@ -64,11 +57,11 @@ class RandomChar extends Component {
                         Or choose another one
                     </p>
 
-                    <a onClick={this.updateChar} className='button button__main'>
+                    <button onClick={this.updateChar} className='button button__main'>
                         <div className="inner">
                             Try it
                         </div>
-                    </a>
+                    </button>
                     <img src={mjolnir} alt="mjolnir" className="randomchar__decoration" />
                 </div>
             </div>
