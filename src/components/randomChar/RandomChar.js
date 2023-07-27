@@ -18,7 +18,7 @@ class RandomChar extends Component {
         this.updateChar();
         // setInterval(this.updateChar, 15000);
     }
-    onCharLoading = (char) => {
+    onCharLoading = () => {
         this.setState({ loading: true })
     }
     onCharLoaded = (char) => {
